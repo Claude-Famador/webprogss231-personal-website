@@ -3,31 +3,31 @@ body, html {
     padding: 0;
     font-family: Arial, sans-serif;
 }
-
+ 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas:
         "header header header"
         "about achievements course"
         "experience hobbies goals"
-        "sections=overview sections-overview gallery"
+        "sections-overview sections-overview gallery"
         "footer footer footer";
     gap: 15px;
-    padding: 20px;   
+    padding: 20px;
 }
-
+ 
 header {
     grid-area: header;
     background-color: #f0f0f0;
     text-align: center;
     padding: 20px;
 }
-
+ 
 .about-me { grid-area: about; }
 .achievements { grid-area: achievements; }
 .course { grid-area: course; }
-.experience { grid-area: experience ; }
+.experience { grid-area: experience; }
 .hobbies { grid-area: hobbies; }
 .goals { grid-area: goals; }
 .sections-overview {
@@ -37,26 +37,27 @@ header {
     background-color: #e0e0e0;
     padding: 10px;
 }
-
+ 
 .gallery {
     grid-area: gallery;
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
-
+ 
 .gallery img {
     max-width: 100%;
     height: auto;
 }
-
+ 
 footer {
     grid-area: footer;
     text-align: center;
     background-color: #f0f0f0;
-    padding: 20px;
+    padding: 10px;
 }
-
+ 
+/* Responsive Design */
 @media (max-width: 768px) {
     .grid-container {
         grid-template-columns: 1fr;

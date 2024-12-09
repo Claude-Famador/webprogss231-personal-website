@@ -1,30 +1,21 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 :root {
-    --primary-color: #3498db;
-    --secondary-color: #2980b9;
-    --dark-color: #2c3e50;
-    --light-color: #ecf0f1;
-    --accent-color: #e74c3c;
-}
-
-body {
+    --primary: #3498db;
+    --secondary: #2980b9;
+    --dark: #2c3e50;
+    --light: #ecf0f1;
+    --accent: #e74c3c;
+  }
+  
+  body {
     font-family: 'Poppins', sans-serif;
     line-height: 1.6;
-    background-color: var(--light-color);
-    color: var(--dark-color);
-}
-
-.container {
+    background-color: var(--light);
+    color: var(--dark);
+  }
+  
+  .container {
     display: grid;
-    grid-template-areas: 
-        "header header"
-        "sidebar content"
-        "footer footer";
+    grid-template-areas: "header header" "sidebar content" "footer footer";
     grid-template-columns: 250px 1fr;
     max-width: 1200px;
     margin: 0 auto;
@@ -32,113 +23,102 @@ body {
     box-shadow: 0 10px 30px rgba(0,0,0,0.1);
     border-radius: 15px;
     overflow: hidden;
-}
-
-.header {
+  }
+  
+  .header {
     grid-area: header;
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: linear-gradient(135deg, var(--primary), var(--secondary));
     color: white;
     padding: 30px;
     text-align: center;
-}
-
-.sidebar {
+  }
+  
+  .sidebar {
     grid-area: sidebar;
-    background-color: var(--dark-color);
+    background-color: var(--dark);
     display: flex;
     flex-direction: column;
     padding: 20px;
-}
-
-.nav-item {
+  }
+  
+  .nav-item {
     display: flex;
     align-items: center;
     padding: 12px 15px;
     margin: 5px 0;
     background-color: rgba(255,255,255,0.1);
-    color: var(--light-color);
+    color: var(--light);
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     cursor: pointer;
-}
-
-.nav-item:hover {
-    background-color: var(--primary-color);
+  }
+  .nav-item:hover {
+    background-color: var(--primary);
     transform: translateX(10px);
-}
-
-.main-content {
+  }
+  
+  .main-content {
     grid-area: content;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     padding: 30px;
-}
-
-.content-section {
+  }
+  
+  .content-section {
     flex: 1;
     min-width: 250px;
     background-color: white;
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.content-section:hover {
+    transition: transform 0.3s;
+  }
+  .content-section:hover {
     transform: scale(1.02);
-}
-
-.content-section h2 {
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--primary-color);
+  }
+  .content-section h2 {
+    color: var(--accent);
+    border-bottom: 2px solid var(--primary);
     padding-bottom: 10px;
     margin-bottom: 15px;
-}
-
-.image-container {
+  }
+  
+  .image-container {
     display: flex;
     justify-content: space-between;
     gap: 15px;
-}
-
-.image-container img {
+  }
+  .image-container img {
     width: 100%;
     height: auto;
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-}
-
-.footer {
+  }
+  
+  .footer {
     grid-area: footer;
-    background-color: var(--dark-color);
-    color: var(--light-color);
+    background-color: var(--dark);
+    color: var(--light);
     text-align: center;
     padding: 15px;
-}
-
-@media screen and (max-width: 768px) {
+  }
+  
+  @media (max-width: 768px) {
     .container {
-        grid-template-areas: 
-            "header"
-            "sidebar"
-            "content"
-            "footer";
-        grid-template-columns: 1fr;
+      grid-template-areas: "header" "sidebar" "content" "footer";
+      grid-template-columns: 1fr;
     }
-
     .sidebar {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
     }
-
     .nav-item {
-        flex-basis: calc(33.333% - 10px);
-        margin: 5px;
+      flex-basis: calc(33.333% - 10px);
+      margin: 5px;
     }
-
     .image-container {
-        flex-direction: column;
+      flex-direction: column;
     }
-}
+  }

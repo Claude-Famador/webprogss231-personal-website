@@ -7,51 +7,98 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </head>
-<body>
+<body class="bg-light">
     
-    <div class="container-fluid mt-3">
-        <h1>Personal Profile</h1>
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md bg-primary text-white">1 of 2 About me</div>
-            <p>Hello! I am Claude Jairo Famador and this is my attempt in making a personal webpage about me. There's not much to see here so move along.</p>
-            <div class="col-md bg-dark text-white">2 of 2 Education</div>
-            <ul>
-                <li>Award for Research Paper Making</li>
-                <li>2nd and 3rd Place in my Highschool's Spelling Bee</li>
-            </ul>
-          </div>  
-        </div>
-        <br>
-        
-        <div class="container-fluid">
-          <div class="row">
-            <div class="col-md bg-primary text-white">1 of 4 Course</div>
-            <table>
-                <tr>
-                    <th>Course Name</th>
-                    <th>Year</th>
-                </tr>
-                <tr>
-                    <td>Software System</td>
-                    <td>2023</td>
-                </tr>
-            </table>
-            <div class="col-md bg-dark text-white">2 of 4 Hobbies</div>
-            <ul>
-                <li>Tetris</li>
-                <li>Video Editing</li>
-                <li>Achievement Hunting in Games</li>
-            </ul>
-            <div class="col-md bg-primary text-white">3 of 4 IT Experience</div>
-            <p>I only ever saw tutorials on YouTube and worked from there I have slight HTML knowledge from highschooll but didn't delve into it that much </p>
-            <div class="col-md bg-dark text-white">4 of 4 Picture Gallery</div>
-            <img src="htmlimg1.jpg" alt="Images of me and my groupmates in our research group with one of our consultants">  
-            <img src="htmlimg2.jpg" alt="After the Defense">
-          </div>  
+    <div class="container-fluid bg-primary text-white py-4 mb-4 shadow">
+        <div class="container"
+        <h1 class="display-5 fw-bold text-center">Claude Jairo Famador</h1>
+        <p class="text-center lead"> Personal Profile</p>
         </div>
     </div>
 
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-header bg-primary text-white">
+                        <h5 class="card-title mb-0">About Me</h5>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">Hello! I am Claude Jairo Famador and this is my attempt in making a personal webpage about me. There's not much to see here so move along.</p>
+                    </div>
+                </div>
+            </div>
 
-</body>
-</html>
+<div class="col-md-6">
+    <div class="card h-100 shadow-sm">
+        <div class="card-header bg-success text-white">
+            <h5 class="card-title mb-0">Education</h5>
+        </div>
+    </div>
+</div>
+<div class="card-body">
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            Award for Research Paper Making
+            <span class="badge bg-primary rounded-pill">Achievement</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            2nd and 3rd Place in Highschool's Spelling Bee
+            <span class="badge bg-success rounded-pill">Award</span>
+        </li>
+    </ul>
+</div>
+</div>
+</div>
+</div>
+
+<div class="row g-4 mt-3">
+    <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-header bg-info text-white">
+                <h5 class="card-title mb-0">Course</h5>
+            </div>
+            <div class="card-body">
+                <table class="table table-borderless">
+                    <thead>
+                        <tr>
+                            <th>Course</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Software System</td>
+                            <td>2023</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-header bg-warning text-dark">
+                <h5 class="card-title mb-0">Hobbies</h5>
+            </div>
+            <div class="card-body">
+                <div class="list-group">
+                    <a href="#" class="list-group-item list-group-item-action">Tetris</a>
+                    <a href="#" class="list-group-item list-group-item-action">Video Editing</a>
+                    <a href="#" class="list-group-item list-group-item-action">Achievement Hunting in Games</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-3">
+        <div class="card h-100 shadow-sm">
+            <div class="card-header bg-danger text-white">
+                <h5 class="card-title mb-0">IT Experience</h5>
+            </div>
+            <div class="card-body">
+                <p class="card-text">I only ever saw tutorials on YouTube and worked from there. I have slight HTML knowledge from highschool but didn't delve into it that much.</p>
+            </div>
+        </div>
+    </div>

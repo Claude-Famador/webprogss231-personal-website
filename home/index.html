@@ -4,15 +4,7 @@
 
 <h2>Demo JavaScript in Body</h2>
 
-<p id="demo">A Paragraph</p>
 
-<button type="button" onclick="myFunction()">Try it</button>
-
-<script>
-function myFunction() {
-  document.getElementById("demo").innerHTML = "Paragraph changed.";
-}
-</script>
 
 <h1>About Me</h1>
 <p>Hello! I am Claude Jairo Famador and this is my attempt in making a personal webpage about me. There's not much to see here so move along.</p>
@@ -52,7 +44,24 @@ function myFunction() {
 
 <img src="htmlimg1.jpg" alt="Images of me and my groupmates in our research group with one of our consultants">  
 <img src="htmlimg2.jpg" alt="After the Defense">
+<p id="demo">A Paragraph</p>
 
+<button type="button" onclick="myFunction()">Try it</button>
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Paragraph changed.";
+}
+</script>
+
+<br>
+<button type="button" onclick="myFunction2()">Try it</button>
+<script>
+function myFunction2() {
+  const element = document.getElementsByTagName("p");
+
+  document.getElementById("demo").innerHTML = 'The text in first paragraph (index 0) is: ' + element[0].innerHTML;
+}
+</script>
 <script src="myScript.js"></script>
 </body>
 </html>

@@ -1,0 +1,40 @@
+:root {
+  --clr-dark: ;
+  --clr-light: #e2e8f0;
+  --clr-gray400: #a1a1aa;
+  --clr-slate00: #475569;
+  --clr-gray800: #1f2937;
+  --clr-rose: ;
+  --clr-indigo: ;
+}
+
+* {
+  margin: 0;
+  line-height: calc(1em + 0.5rem);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+  user-select: none;
+}
+
+button {
+  display: inline-block;
+  padding: 0;
+  border: none;
+  background: none;
+  cursor: pointer;
+}

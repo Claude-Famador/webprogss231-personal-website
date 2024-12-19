@@ -1,11 +1,28 @@
 :root {
-  --clr-dark: ;
+  --sizes-xxs: 0.5rem;
+  --sizes-xs: 0.75rem;
+  --sizes-s: 0.875rem;
+  --sizes-default: 1rem;
+  --sizes-l: 1.125rem;
+  --sizes-xl: 1.25rem;
+  --sizes-2xl: 1.5rem;
+  --sizes-3xl: 1.875rem;
+  --sizes-4xl: 2.25rem;
+  --sizes-5xl: 3rem;
+  --sizes-6xl: 3.75rem;
+  --sizes-7xl: 4.5rem;
+  --sizes-8xl: 6rem;
+  --sizes-9xl: 8rem;
+  --sizes-10xl: 10rem;
+
+  --clr-dark: #070a13;
   --clr-light: #e2e8f0;
   --clr-gray400: #a1a1aa;
   --clr-slate00: #475569;
   --clr-gray800: #1f2937;
-  --clr-rose: ;
-  --clr-indigo: ;
+  --clr-rose: #f43f5e;
+  /* 	rgb(244, 63, 94) */
+  --clr-indigo: #6366f1;
 }
 
 * {
@@ -19,6 +36,8 @@ html {
 
 body {
   font-family: 'Montserrat', sans-serif;
+  color: var(--clr-light);
+  background-color: var(--clr-dark);
 }
 
 img,
@@ -35,6 +54,15 @@ button {
   display: inline-block;
   padding: 0;
   border: none;
+  color: inherit;
   background: none;
   cursor: pointer;
+}
+
+a {
+  color: var(--clr-indigo);
+}
+
+strong {
+  color: var(--clr-rose)
 }

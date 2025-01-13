@@ -1,14 +1,12 @@
+      
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claude Jairo Famador - Personal Profile</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
@@ -71,11 +69,15 @@
 
                     <div class="tab-pane fade" id="v-pills-hobbies" role="tabpanel">
                         <h2 class="mb-3">Hobbies & Interests</h2>
-                        <ul class="list-group">
-                            <li class="list-group-item">Tetris</li>
-                            <li class="list-group-item">Video Editing</li>
-                            <li class="list-group-item">Achievement Hunting in Games</li>
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item" v-for="hobby in hobbies" :key="hobby.name" @click="selectHobby(hobby)">
+                                {{ hobby.name }}
+                            </li>
                         </ul>
+                        <div class="mt-3" v-if="selectedHobby">
+                            <h3>{{ selectedHobby.name }}</h3>
+                            <p>{{ selectedHobby.description }}</p>
+                        </div>
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-goals" role="tabpanel">
@@ -86,9 +88,12 @@
                     <div class="tab-pane fade" id="v-pills-gallery" role="tabpanel">
                         <h2 class="mb-3">Gallery</h2>
                         <div class="gallery">
-                            <img v-for="image in images" :src="image.src" :alt="image.alt" class="img-fluid mb-3">
+                            <div v-for="(image, index) in images" :key="index" @click="showLightbox(index)" class="gallery-item">
+                                <img :src="image.src" :alt="image.alt" class="img-thumbnail" />
+                            </div>
                         </div>
                     </div>
+                    <vue-easy-lightbox :visible="lightboxVisible" :imgs="imageUrls" :index="currentImageIndex" @hide="lightboxVisible = false"></vue-easy-lightbox>
                 </div>
             </main>
         </div>
@@ -97,14 +102,13 @@
             <p>© 2024 Claude Jairo Famador | Personal Portfolio</p>
         </footer>
     </div>
-
-    <!-- Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <!-- Custom JavaScript (app.js) -->
+    <script src="https://unpkg.com/vue-easy-lightbox@0.15.0/dist/vue-easy-lightbox.min.js"></script>
     <script src="js/app.js"></script>
-    <!-- Bootstrap JS and its dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
+
+    

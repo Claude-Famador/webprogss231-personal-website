@@ -72,10 +72,14 @@
                     <div class="tab-pane fade" id="v-pills-hobbies" role="tabpanel">
                         <h2 class="mb-3">Hobbies & Interests</h2>
                         <ul class="list-group">
-                            <li class="list-group-item">Tetris</li>
+                            <li class="list-group-item" id="tetris-item">Tetris</li>
                             <li class="list-group-item">Video Editing</li>
                             <li class="list-group-item">Achievement Hunting in Games</li>
                         </ul>
+                        <video id="tetris-video" width="320" height="240" controls autoplay loop style="display: none;">
+                            <source src="path/to/your/tetris-video.mp4" type="video/mp4"> 
+                            Your browser does not support the video tag.
+                        </video>
                     </div>
 
                     <div class="tab-pane fade" id="v-pills-goals" role="tabpanel">
@@ -97,14 +101,12 @@
             <p>© 2024 Claude Jairo Famador | Personal Portfolio</p>
         </footer>
     </div>
-
-    <!-- Vue.js -->
+    <script src="js/fortnitehamburger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
-    <!-- Custom JavaScript (app.js) -->
     <script src="js/app.js"></script>
-    <!-- Bootstrap JS and its dependencies -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
 </body>
 </html>

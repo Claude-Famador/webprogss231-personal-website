@@ -4,109 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Claude Jairo Famador - Personal Profile</title>
-    <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div id="app" class="container">
+        <!-- Added a theme toggle button -->
+        <button onclick="toggleTheme()" id="themeToggle">Toggle Dark/Light Mode</button>
+
+        <!-- Added a language selector -->
+        <select id="languageSelect" onchange="changeLanguage()">
+            <option value="en">English</option>
+            <option value="tl">Tagalog</option>
+        </select>
+
         <header class="header text-center py-5">
             <h1 class="display-4">Claude Jairo Famador</h1>
             <p class="lead">Personal Profile and Portfolio</p>
+            <!-- Added a typing effect container -->
+            <div id="typingEffect"></div>
         </header>
 
-        <div class="row">
-            <aside class="col-md-3">
-                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
-                    <a class="nav-link active" id="v-pills-about-tab" data-toggle="pill" href="#v-pills-about" role="tab">About Me</a>
-                    <a class="nav-link" id="v-pills-achievements-tab" data-toggle="pill" href="#v-pills-achievements" role="tab">Achievements</a>
-                    <a class="nav-link" id="v-pills-course-tab" data-toggle="pill" href="#v-pills-course" role="tab">Course</a>
-                    <a class="nav-link" id="v-pills-experience-tab" data-toggle="pill" href="#v-pills-experience" role="tab">IT Experience</a>
-                    <a class="nav-link" id="v-pills-hobbies-tab" data-toggle="pill" href="#v-pills-hobbies" role="tab">Hobbies</a>
-                    <a class="nav-link" id="v-pills-goals-tab" data-toggle="pill" href="#v-pills-goals" role="tab">Goals</a>
-                    <a class="nav-link" id="v-pills-gallery-tab" data-toggle="pill" href="#v-pills-gallery" role="tab">Gallery</a>
+        <!-- Rest of your existing content remains the same until the scripts section -->
+
+        <!-- Added print button before footer -->
+        <button onclick="printPortfolio()" class="mt-3">Print Portfolio</button>
+
+        <!-- Added contact form -->
+        <div class="mt-4">
+            <h3>Contact Me</h3>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+                <div>
+                    <label for="name">Name:</label><br>
+                    <input type="text" id="name" name="name" required>
                 </div>
-            </aside>
-
-            <main class="col-md-9">
-                <div class="tab-content" id="v-pills-tabContent">
-                    <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel">
-                        <h2 class="mb-3">About Me</h2>
-                        <p>Hello! I am Claude Jairo Famador, an aspiring computer science enthusiast exploring the world of technology.</p>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-achievements" role="tabpanel">
-                        <h2 class="mb-3">Achievements</h2>
-                        <ul class="list-group">
-                            <li class="list-group-item">Award for Research Paper Making</li>
-                            <li class="list-group-item">2nd and 3rd Place in Highschool Spelling Bee</li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-course" role="tabpanel">
-                        <h2 class="mb-3">Course</h2>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th>Course Name</th>
-                                    <th>Year</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>Software System</td>
-                                    <td>2023</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    
-                    <div class="tab-pane fade" id="v-pills-experience" role="tabpanel">
-                        <h2 class="mb-3">IT Experience</h2>
-                        <p>Learning through online tutorials and exploring programming concepts.</p>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-hobbies" role="tabpanel">
-                        <h2 class="mb-3">Hobbies & Interests</h2>
-                        <ul class="list-group">
-                            <li class="list-group-item" id="tetris-item">Tetris</li>
-                            <li class="list-group-item">Video Editing</li>
-                            <li class="list-group-item">Achievement Hunting in Games</li>
-                        </ul>
-                        <video id="tetris-video" width="320" height="240" controls autoplay loop style="display: none;">
-                            <source src="images/tetris.mp4" type="video/mp4"> 
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-goals" role="tabpanel">
-                        <h2 class="mb-3">Goals</h2>
-                        <p>Build a solid reputation in the CS world and transform my hobbies into passion projects.</p>
-                    </div>
-
-                    <div class="tab-pane fade" id="v-pills-gallery" role="tabpanel">
-                        <h2 class="mb-3">Gallery</h2>
-                        <div class="gallery">
-                            <img v-for="image in images" :src="image.src" :alt="image.alt" class="img-fluid mb-3">
-                        </div>
-                    </div>
+                <div>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required>
                 </div>
-            </main>
+                <div>
+                    <label for="message">Message:</label><br>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
         </div>
 
         <footer class="footer text-center mt-5 py-3">
+            <!-- Added last updated date -->
+            <p>Last Updated: <span id="lastUpdated"></span></p>
             <p>© 2024 Claude Jairo Famador | Personal Portfolio</p>
         </footer>
     </div>
+
+    <!-- Your existing scripts -->
     <script src="js/fortnitehamburger.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="js/app.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-
+    <!-- Added new JavaScript for our features -->
+    <script src="js/darktheme.js"></script>
+    <script src="js/typing.js"></script>
 </body>
 </html>

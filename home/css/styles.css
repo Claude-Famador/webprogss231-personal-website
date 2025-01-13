@@ -1,0 +1,98 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f8f9fa; /* Light background color */
+    color: #343a40; /* Dark text color */
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+/* Header Styles */
+.header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.header h1 {
+    font-weight: 600;
+    color: #007bff; /* Primary color */
+}
+
+/* Navigation Styles */
+.nav-pills .nav-link {
+    color: #343a40;
+    background-color: #e9ecef; /* Light gray background */
+    margin-bottom: 5px;
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+.nav-pills .nav-link:hover {
+    background-color: #ced4da; /* Slightly darker on hover */
+}
+
+.nav-pills .nav-link.active {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Content Styles */
+.content-section {
+    margin-bottom: 30px;
+}
+
+.content-section h2 {
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.content-section ul,
+.content-section p {
+    font-size: 0.95rem;
+}
+
+/* Table Styles */
+.table {
+    background-color: #fff;
+}
+
+.table th {
+    background-color: #e9ecef;
+    color: #343a40;
+}
+
+/* Gallery Styles */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+
+.gallery img {
+    max-width: 200px; /* Adjust as needed */
+    height: auto;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    transition: transform 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.gallery img:hover {
+    transform: scale(1.1); /* Slightly increase size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #f8f9fa;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

@@ -1,50 +1,110 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>My Personal Profile and About Me</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Jairo Famador - Personal Profile</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
+    <div id="app" class="container">
+        <header class="header text-center py-5">
+            <h1 class="display-4">Claude Jairo Famador</h1>
+            <p class="lead">Personal Profile and Portfolio</p>
+        </header>
 
-<h1>About Me</h1>
-<p>Hello! I am Claude Jairo Famador and this is my attempt in making a personal webpage about me. There's not much to see here so move along.</p>
+        <div class="row">
+            <aside class="col-md-3">
+                <div class="nav flex-column nav-pills" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <a class="nav-link active" id="v-pills-about-tab" data-toggle="pill" href="#v-pills-about" role="tab">About Me</a>
+                    <a class="nav-link" id="v-pills-achievements-tab" data-toggle="pill" href="#v-pills-achievements" role="tab">Achievements</a>
+                    <a class="nav-link" id="v-pills-course-tab" data-toggle="pill" href="#v-pills-course" role="tab">Course</a>
+                    <a class="nav-link" id="v-pills-experience-tab" data-toggle="pill" href="#v-pills-experience" role="tab">IT Experience</a>
+                    <a class="nav-link" id="v-pills-hobbies-tab" data-toggle="pill" href="#v-pills-hobbies" role="tab">Hobbies</a>
+                    <a class="nav-link" id="v-pills-goals-tab" data-toggle="pill" href="#v-pills-goals" role="tab">Goals</a>
+                    <a class="nav-link" id="v-pills-gallery-tab" data-toggle="pill" href="#v-pills-gallery" role="tab">Gallery</a>
+                </div>
+            </aside>
 
-<h2>Education / Achievements</h2>
-<ul>
-    <li>Award for Research Paper Making</li>
-    <li>2nd and 3rd Place in my Highschool's Spelling Bee</li>
-</ul>
+            <main class="col-md-9">
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-about" role="tabpanel">
+                        <h2 class="mb-3">About Me</h2>
+                        <p>Hello! I am Claude Jairo Famador, an aspiring computer science enthusiast exploring the world of technology.</p>
+                    </div>
 
-<h2>Course</h2>
-<table>
-    <tr>
-        <th>Course Name</th>
-        <th>Year</th>
-    </tr>
-    <tr>
-        <td>Software System</td>
-        <td>2023</td>
-    </tr>
-</table>
+                    <div class="tab-pane fade" id="v-pills-achievements" role="tabpanel">
+                        <h2 class="mb-3">Achievements</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item">Award for Research Paper Making</li>
+                            <li class="list-group-item">2nd and 3rd Place in Highschool Spelling Bee</li>
+                        </ul>
+                    </div>
 
-<h2>IT Experience</h2>
-<p>I only ever saw tutorials on YouTube and worked from there I have slight HTML knowledge from highschooll but didn't delve into it that much </p>
+                    <div class="tab-pane fade" id="v-pills-course" role="tabpanel">
+                        <h2 class="mb-3">Course</h2>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th>Course Name</th>
+                                    <th>Year</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Software System</td>
+                                    <td>2023</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane fade" id="v-pills-experience" role="tabpanel">
+                        <h2 class="mb-3">IT Experience</h2>
+                        <p>Learning through online tutorials and exploring programming concepts.</p>
+                    </div>
 
-<h2>Hobbies & Interests</h2>
-<ul>
-    <li>Tetris</li>
-    <li>Video Editing</li>
-    <li>Achievement Hunting in Games</li>
-</ul>
+                    <div class="tab-pane fade" id="v-pills-hobbies" role="tabpanel">
+                        <h2 class="mb-3">Hobbies & Interests</h2>
+                        <ul class="list-group">
+                            <li class="list-group-item">Tetris</li>
+                            <li class="list-group-item">Video Editing</li>
+                            <li class="list-group-item">Achievement Hunting in Games</li>
+                        </ul>
+                    </div>
 
-<h2>Goals In Life / Dream</h2>
-<p>Build a solid reputation within the CS World and manage to implement my hobbies and interests into this to build a passion project.</p>
+                    <div class="tab-pane fade" id="v-pills-goals" role="tabpanel">
+                        <h2 class="mb-3">Goals</h2>
+                        <p>Build a solid reputation in the CS world and transform my hobbies into passion projects.</p>
+                    </div>
 
-<h2>Picture Gallery</h2>
+                    <div class="tab-pane fade" id="v-pills-gallery" role="tabpanel">
+                        <h2 class="mb-3">Gallery</h2>
+                        <div class="gallery">
+                            <img v-for="image in images" :src="image.src" :alt="image.alt" class="img-fluid mb-3">
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
 
-<img src="htmlimg1.jpg" alt="Images of me and my groupmates in our research group with one of our consultants">  
+        <footer class="footer text-center mt-5 py-3">
+            <p>© 2024 Claude Jairo Famador | Personal Portfolio</p>
+        </footer>
+    </div>
 
-
-<img src="htmlimg2.jpg" alt="After the Defense">
-
+    <!-- Vue.js -->
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <!-- Custom JavaScript (app.js) -->
+    <script src="js/app.js"></script>
+    <!-- Bootstrap JS and its dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
